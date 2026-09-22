@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "engine": "chromium",
+  "version": "153.0.8010.0",
+  "fixture": "synthetic test content, not approved artist content",
+  "checks": [
+    "filters, empty result and back restoration",
+    "subpath direct refresh, long story and detail image",
+    "high resolution requested only after explicit click",
+    "long title and story responsive widths",
+    "subpath 404 and internal links"
+  ]
+}

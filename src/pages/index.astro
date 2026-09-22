@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArtworkImage from '../components/ArtworkImage.astro';
+import ArtworkCard from '../components/ArtworkCard.astro';
+import Icon from '../components/Icon.astro';
+import {artworks,images,site,url} from '../lib/content';
+const all=await artworks();
+const hero=all.find(a=>a.id===site.activeHome.hero);
+const selected=site.activeHome.selected.map(id=>all.find(a=>a.id===id)).filter(a=>a!==undefined);
+---
+<Layout>
+  <section class="hero wrap">
+    <div class="hero-copy"><p class="eyebrow">Oil painting / 油画作品集</p><h1 class="hero-title"><span>Jiang</span><span>Qiao Yan</span></h1>
+    <div class="hero-intro">{site.intro&&<p>{site.intro}</p>}<a class="text-link" href={url('works/')}>查看全部作品<Icon/></a></div></div>
+    {hero&&<figure class="hero-art" data-work-id={hero.id}><span class="vertical-note">01 / SELECTED PAINTING</span><a href={url(`works/${hero.data.slug}/`)} aria-label={`查看${hero.data.title}`}><ArtworkImage image={images[hero.id][0]} eager kind="display" sizes="(max-width: 640px) 82vw, 43vw"/></a><figcaption><span>{hero.data.title}</span><span>{hero.data.year||'01'}</span></figcaption></figure>}
+    <div class="hero-foot"><a href="#selected">查看首页精选<Icon name="down"/></a><span>SELECTED WORKS / {String((hero?1:0)+selected.length).padStart(2,'0')}</span></div>
+  </section>
+  <section class="selected-section wrap" id="selected" aria-labelledby="selected-title">
+    <header class="section-heading"><div><p class="eyebrow">A selection / 精选作品</p><h2 id="selected-title">Selected<br/><em>works.</em></h2></div><p class="section-note">{site.mode==='demo'?'画作尚待呈现。\n先为每一种画幅，留出空间。':'Jiang Qiao Yan'}</p></header>
+    <div class="featured-grid">{selected.map((art,i)=><ArtworkCard art={art} index={i+1} featured/>)}</div>
+    {!selected.length&&<p class="empty-state">精选作品整理中。</p>}
+    <div class="archive-foot"><p>继续浏览全部作品</p><a class="text-link" href={url('works/')}>查看全部作品 <span class="count">{all.length}</span><Icon/></a></div>
+  </section>
+  <section class="about-teaser wrap"><p class="eyebrow">The artist / 关于</p><div><h2>Jiang Qiao Yan</h2><p>{site.about[0]||(site.mode==='demo'?'艺术家简介与创作自述将在确认后呈现。':'艺术家资料整理中。')}</p><a class="text-link" href={url('about/')}>关于艺术家<Icon/></a></div></section>
+  <section class="contact-teaser wrap"><p class="eyebrow">Contact / 联系</p><a href={url('contact/')}>展览、作品与交流<Icon/></a></section>
+</Layout>

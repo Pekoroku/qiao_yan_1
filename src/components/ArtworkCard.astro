@@ -1,0 +1,14 @@
+---
+import type {CollectionEntry} from 'astro:content';
+import {images,url} from '../lib/content';
+import ArtworkImage from './ArtworkImage.astro';
+import Icon from './Icon.astro';
+interface Props {art:CollectionEntry<'artworks'>;index?:number;featured?:boolean;eager?:boolean}
+const {art,index=0,featured=false,eager=false}=Astro.props;
+---
+<article class:list={['work-card',{'featured-card':featured}]} data-work-id={art.id} data-year={art.data.year||''} data-series={art.data.series||''}>
+  <a class="art-link" href={url(`works/${art.data.slug}/`)} aria-label={`查看${art.data.title}`}>
+    <ArtworkImage image={images[art.id][0]} eager={eager} kind={featured?'display':'thumb'} sizes={featured?'(max-width: 640px) 88vw, 42vw':'(max-width: 640px) 88vw, (max-width: 1000px) 43vw, 28vw'}/>
+    <div class="work-meta"><div><h3>{art.data.title}</h3><p>{art.data.isPlaceholder?'构图占位 · 非正式作品':[art.data.year,art.data.medium].filter(Boolean).join(' · ')}</p></div><span class="card-number">{String(index+1).padStart(2,'0')}</span><Icon class="card-arrow"/></div>
+  </a>
+</article>

@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {site} from '../lib/content';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="联系"><section class="contact-page wrap"><p class="eyebrow">Contact / 联系</p><h1>Let’s<br/><em>talk.</em></h1><div class="contact-body"><p>展览 · 作品咨询 · 交流</p>{site.email?<a class="contact-email" href={`mailto:${site.email}`}>{site.email}<Icon/></a>:<p class="muted">联系方式将在确认后公布。</p>}{site.socials.length>0&&<ul class="social-links">{site.socials.map(s=><li><a class="text-link" href={s.url} target="_blank" rel="noopener noreferrer">{s.label}<Icon/></a></li>)}</ul>}</div></section></Layout>

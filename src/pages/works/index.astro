@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArtworkCard from '../../components/ArtworkCard.astro';
+import {artworks,site} from '../../lib/content';
+const all=await artworks();
+const years=[...new Set(all.map(a=>a.data.year).filter((x):x is string=>Boolean(x)))].sort().reverse();
+const series=[...new Set(all.map(a=>a.data.series).filter((x):x is string=>Boolean(x)))];
+---
+<Layout title="全部作品">
+  <section class="archive wrap">
+    <header class="page-heading"><div><p class="eyebrow">The collection / 全部作品</p><h1>Works<span class="heading-dot">.</span></h1></div><p><span id="result-count">{all.length}</span> 件{site.mode==='demo'?'版式样本':'作品'}</p></header>
+    {(years.length>1||series.length>1)&&<form class="filters" hidden data-filters>
+      {years.length>1&&<label>年份<select name="year"><option value="">全部年份</option>{years.map(y=><option value={y}>{y}</option>)}</select></label>}
+      {series.length>1&&<label>系列<select name="series"><option value="">全部系列</option>{series.map(s=><option value={s}>{s}</option>)}</select></label>}
+      <button type="reset" class="subtle-button">清除筛选</button><span id="filter-status" role="status" aria-live="polite"></span>
+    </form>}
+    <div class="archive-grid" data-archive>{all.map((art,i)=><ArtworkCard art={art} index={i} eager={i<3}/>)}</div>
+    <p id="empty-filter" class="empty-state" hidden>没有符合条件的作品，请调整或清除筛选。</p>
+    {!all.length&&<p class="empty-state">作品正在整理，敬请期待。</p>}
+    <div class="archive-end"><span>JIANG QIAO YAN</span><span>共 {all.length} 件{site.mode==='demo'?'版式样本':'作品'}</span></div>
+  </section>
+</Layout>

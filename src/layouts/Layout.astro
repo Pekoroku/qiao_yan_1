@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import {site,url} from '../lib/content';
+import Icon from '../components/Icon.astro';
+interface Props {title?:string;description?:string;image?:string;noindex?:boolean}
+const {title,description=site.description,image,noindex=false}=Astro.props;
+const pageTitle=title?`${title} — ${site.name}`:`${site.name} — 油画作品集`;
+const canonical=new URL(Astro.url.pathname,Astro.site);
+const active=Astro.url.pathname;
+const nav=[['作品','works/'],['关于','about/'],['联系','contact/']];
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>{pageTitle}</title><meta name="description" content={description}/>
+  <meta name="theme-color" content="#efeee8"/><link rel="icon" href={url('favicon.svg')} type="image/svg+xml"/>
+  <link rel="canonical" href={canonical}/>
+  <meta name="robots" content={site.mode==='demo'||noindex?'noindex,nofollow':'index,follow'}/>
+  <meta property="og:type" content="website"/><meta property="og:title" content={pageTitle}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:locale" content="zh_CN"/>
+  {image&&<meta property="og:image" content={new URL(url(image),Astro.site)}/>}
+  <script is:inline>try{if(localStorage.getItem('jqy-motion')==='off')document.documentElement.dataset.motion='off'}catch{}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  {site.mode==='demo'&&<div class="preview-strip"><span>结构预览 · 非正式作品</span><span>JIANG QIAO YAN / 01</span></div>}
+  <header class="site-header wrap">
+    <a class="brand" href={url()} aria-label="Jiang Qiao Yan 首页">Jiang Qiao Yan<span>PAINTING PORTFOLIO</span></a>
+    <nav aria-label="主导航">{nav.map(([label,path],i)=><a href={url(path)} aria-current={active.startsWith(url(path))?'page':undefined}><small>0{i+1}</small>{label}</a>)}</nav>
+    <button class="motion-toggle" type="button" aria-pressed="false" aria-label="关闭非必要动效" hidden>动效 <span>开</span></button>
+  </header>
+  <main id="main"><slot/></main>
+  <footer class="site-footer wrap"><a class="footer-name" href={url()}>Jiang Qiao Yan</a><span>{site.mode==='demo'?'结构与交互预览':'油画作品集'}</span><a href={url('works/')}>全部作品<Icon/></a></footer>
+  <script src="../scripts/site.ts"></script>
+</body>
+</html>

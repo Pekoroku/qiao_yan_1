@@ -1,0 +1,410 @@
+{
+  "base": "http://127.0.0.1:4321/",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.0",
+      "checks": [
+        "home nine unique works",
+        "all works route and count",
+        "detail deep refresh, story and focus viewer",
+        "archive back restores scroll",
+        "detail prev/next boundaries",
+        "all responsive widths without overflow",
+        "reduced motion persists and SVG icons",
+        "image request failure leaves page usable",
+        "real 404 response",
+        "JS disabled: core pages and navigation"
+      ],
+      "failures": [],
+      "errors": [],
+      "network": [
+        {
+          "device": "desktop",
+          "width": 1440,
+          "dpr": 1,
+          "route": "",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 65186,
+          "images": 9,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/",
+              "status": 200,
+              "bytes": 19065
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-640.webp",
+              "status": 200,
+              "bytes": 2438
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-640.webp",
+              "status": 200,
+              "bytes": 2660
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-640.webp",
+              "status": 200,
+              "bytes": 3414
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-640.webp",
+              "status": 200,
+              "bytes": 3634
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-640.webp",
+              "status": 200,
+              "bytes": 3610
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-640.webp",
+              "status": 200,
+              "bytes": 1904
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-640.webp",
+              "status": 200,
+              "bytes": 2372
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-08-0-b6ded7a354a29c-640.webp",
+              "status": 200,
+              "bytes": 3156
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-640.webp",
+              "status": 200,
+              "bytes": 2748
+            }
+          ]
+        },
+        {
+          "device": "desktop",
+          "width": 1440,
+          "dpr": 1,
+          "route": "works/",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 142822,
+          "images": 21,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/works/",
+              "status": 200,
+              "bytes": 64809
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-640.webp",
+              "status": 200,
+              "bytes": 2438
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-640.webp",
+              "status": 200,
+              "bytes": 2660
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-640.webp",
+              "status": 200,
+              "bytes": 3414
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-640.webp",
+              "status": 200,
+              "bytes": 3634
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-640.webp",
+              "status": 200,
+              "bytes": 1904
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-640.webp",
+              "status": 200,
+              "bytes": 3610
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-640.webp",
+              "status": 200,
+              "bytes": 2372
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-08-0-b6ded7a354a29c-640.webp",
+              "status": 200,
+              "bytes": 3156
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-10-0-63b72a018ebb0e-640.webp",
+              "status": 200,
+              "bytes": 1406
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-640.webp",
+              "status": 200,
+              "bytes": 2748
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-12-0-75d8b6f07bb1ac-640.webp",
+              "status": 200,
+              "bytes": 3358
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-13-0-5eebae5e22034c-640.webp",
+              "status": 200,
+              "bytes": 2052
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-11-0-92b4ec402d931e-640.webp",
+              "status": 200,
+              "bytes": 4162
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-14-0-8ab02f9864a753-640.webp",
+              "status": 200,
+              "bytes": 3688
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-15-0-1423dd8a850fbc-640.webp",
+              "status": 200,
+              "bytes": 2946
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-16-0-d610bce0d25f13-640.webp",
+              "status": 200,
+              "bytes": 1882
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-18-0-9f218de560871d-640.webp",
+              "status": 200,
+              "bytes": 1948
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-19-0-09c00af87b2162-640.webp",
+              "status": 200,
+              "bytes": 3614
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-17-0-8c8181022fb9be-640.webp",
+              "status": 200,
+              "bytes": 3008
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-20-0-249d79ad1510dd-640.webp",
+              "status": 200,
+              "bytes": 2844
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-21-0-a58155fa100c55-640.webp",
+              "status": 200,
+              "bytes": 984
+            }
+          ]
+        },
+        {
+          "device": "desktop",
+          "width": 1440,
+          "dpr": 1,
+          "route": "works/sample-01/",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 33798,
+          "images": 1,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/works/sample-01/",
+              "status": 200,
+              "bytes": 9145
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
+              "status": 200,
+              "bytes": 4468
+            }
+          ]
+        },
+        {
+          "device": "mobile",
+          "width": 390,
+          "dpr": 3,
+          "route": "",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 104418,
+          "images": 9,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/",
+              "status": 200,
+              "bytes": 19065
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
+              "status": 200,
+              "bytes": 4468
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-1440.webp",
+              "status": 200,
+              "bytes": 7904
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-1050.webp",
+              "status": 200,
+              "bytes": 6968
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-1300.webp",
+              "status": 200,
+              "bytes": 9038
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-1440.webp",
+              "status": 200,
+              "bytes": 6014
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-1200.webp",
+              "status": 200,
+              "bytes": 8688
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-1440.webp",
+              "status": 200,
+              "bytes": 7016
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-08-0-b6ded7a354a29c-1100.webp",
+              "status": 200,
+              "bytes": 6694
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-1440.webp",
+              "status": 200,
+              "bytes": 8378
+            }
+          ]
+        },
+        {
+          "device": "mobile",
+          "width": 390,
+          "dpr": 3,
+          "route": "works/",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 118928,
+          "images": 7,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/works/",
+              "status": 200,
+              "bytes": 64809
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
+              "status": 200,
+              "bytes": 4468
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-960.webp",
+              "status": 200,
+              "bytes": 4262
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-960.webp",
+              "status": 200,
+              "bytes": 5730
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-960.webp",
+              "status": 200,
+              "bytes": 3470
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-960.webp",
+              "status": 200,
+              "bytes": 6360
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-960.webp",
+              "status": 200,
+              "bytes": 5858
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-960.webp",
+              "status": 200,
+              "bytes": 3786
+            }
+          ]
+        },
+        {
+          "device": "mobile",
+          "width": 390,
+          "dpr": 3,
+          "route": "works/sample-01/",
+          "cache": "fresh browser context",
+          "observationSeconds": 5,
+          "network": "unthrottled local HTTP",
+          "pending": 0,
+          "totalBodyBytes": 35780,
+          "images": 1,
+          "payloads": [
+            {
+              "url": "http://127.0.0.1:4321/works/sample-01/",
+              "status": 200,
+              "bytes": 9145
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "status": 200,
+              "bytes": 20185
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-1200.webp",
+              "status": 200,
+              "bytes": 6450
+            }
+          ]
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

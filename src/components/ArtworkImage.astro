@@ -1,0 +1,13 @@
+---
+import {url,type ImageSet} from '../lib/content';
+interface Props {image:ImageSet;eager?:boolean;sizes?:string;kind?:'thumb'|'display';class?:string}
+const {image,eager=false,sizes='(max-width: 640px) 88vw, 40vw',kind='thumb',class:cls=''}=Astro.props;
+const variants=kind==='thumb'?image.variants.filter(v=>v.width<=960):image.variants;
+---
+<div class:list={['image-wrap',cls]} style={`--ratio:${image.width}/${image.height}`}>
+  <picture>
+    <source type="image/webp" srcset={variants.map(v=>`${url(v.src)} ${v.width}w`).join(', ')} sizes={sizes}/>
+    <img src={url(image.fallback)} width={image.width} height={image.height} alt={image.alt} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':'auto'} decoding="async"/>
+  </picture>
+  <span class="image-error" role="status" hidden>图片暂时无法显示，请刷新重试。</span>
+</div>

@@ -1,0 +1,12 @@
+{
+  "name": "Jiang Qiao Yan",
+  "mode": "demo",
+  "description": "Jiang Qiao Yan 油画作品集",
+  "intro": "",
+  "about": [],
+  "exhibitions": [],
+  "email": "",
+  "socials": [],
+  "home": {"hero": "", "selected": []},
+  "demoHome": {"hero": "sample-01", "selected": ["sample-02", "sample-03", "sample-04", "sample-05", "sample-06", "sample-07", "sample-08", "sample-09"]}
+}

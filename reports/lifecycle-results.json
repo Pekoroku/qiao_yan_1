@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "add 51st work",
+    "edit title without changing URL",
+    "retire work and prune its page and derivatives",
+    "60 unique resources",
+    "zero-work empty states",
+    "one-work navigation boundaries",
+    "synthetic live publication, subpath, long story and details"
+  ],
+  "syntheticLiveFixture": "/workspace/scratch/1b42301eb5e8/jiang-qiao-yan/test-results/lifecycle-t8h1WC",
+  "status": "passed"
+}
