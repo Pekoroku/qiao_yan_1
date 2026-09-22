@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/layout.css';
 import '../styles/motion.css';
 import {site,url} from '../lib/content';
 import Icon from '../components/Icon.astro';
@@ -31,7 +32,7 @@ const nav=[['作品','works/'],['关于','about/'],['联系','contact/']];
     <button class="motion-toggle" type="button" aria-pressed="false" aria-label="关闭非必要动效" hidden>动效 <span>开</span></button>
   </header>
   <main id="main"><slot/></main>
-  <footer class="site-footer wrap"><a class="footer-name" href={url()}>Jiang Qiao Yan</a><span>{site.mode==='demo'?'结构与交互预览':'油画作品集'}</span><a href={url('works/')}>全部作品<Icon/></a></footer>
+  <footer class="site-footer"><div class="footer-inner wrap"><a class="footer-name" href={url()}>Jiang Qiao Yan</a><span>{site.mode==='demo'?'结构与交互预览':'油画作品集'}</span><a class="footer-link" href={url('works/')}>全部作品<Icon/></a></div></footer>
   <script src="../scripts/site.ts"></script>
 </body>
 </html>

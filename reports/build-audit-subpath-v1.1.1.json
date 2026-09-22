@@ -1,6 +1,6 @@
 {
   "mode": "demo",
-  "base": "/",
+  "base": "/qiao_yan_1",
   "pages": 55,
   "works": 50,
   "homeIds": [
@@ -15,7 +15,7 @@
     "sample-09"
   ],
   "failures": [],
-  "bytes": 1964867,
+  "bytes": 1980652,
   "jsGzipBytes": 3687,
   "resources": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "file": "404.html",
-      "bytes": 2635,
-      "gzipBytes": 1272
+      "bytes": 2777,
+      "gzipBytes": 1292
     },
     {
       "file": "favicon.svg",
@@ -33,8 +33,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 16191,
-      "gzipBytes": 2916
+      "bytes": 17004,
+      "gzipBytes": 2939
     },
     {
       "file": "robots.txt",
@@ -46,258 +46,258 @@
     },
     {
       "file": "works/index.html",
-      "bytes": 61111,
-      "gzipBytes": 4821
+      "bytes": 63992,
+      "gzipBytes": 4830
     },
     {
       "file": "works/sample-50/index.html",
-      "bytes": 5021,
-      "gzipBytes": 1938
+      "bytes": 5240,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-49/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1948
+      "bytes": 5579,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-48/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1937
+      "bytes": 5517,
+      "gzipBytes": 1959
     },
     {
       "file": "works/sample-47/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-46/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1948
+      "bytes": 5579,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-45/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1938
+      "bytes": 5517,
+      "gzipBytes": 1960
     },
     {
       "file": "works/sample-44/index.html",
-      "bytes": 5234,
-      "gzipBytes": 1929
+      "bytes": 5453,
+      "gzipBytes": 1952
     },
     {
       "file": "works/sample-43/index.html",
-      "bytes": 5336,
-      "gzipBytes": 1948
+      "bytes": 5577,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-42/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1949
+      "bytes": 5579,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-41/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1963
     },
     {
       "file": "works/sample-40/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1950
+      "bytes": 5579,
+      "gzipBytes": 1972
     },
     {
       "file": "works/sample-39/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1963
     },
     {
       "file": "works/sample-38/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1950
+      "bytes": 5579,
+      "gzipBytes": 1972
     },
     {
       "file": "works/sample-37/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1937
+      "bytes": 5517,
+      "gzipBytes": 1960
     },
     {
       "file": "works/sample-36/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-35/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1948
+      "bytes": 5579,
+      "gzipBytes": 1969
     },
     {
       "file": "works/sample-34/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-33/index.html",
-      "bytes": 5234,
-      "gzipBytes": 1930
+      "bytes": 5453,
+      "gzipBytes": 1953
     },
     {
       "file": "works/sample-32/index.html",
-      "bytes": 5336,
-      "gzipBytes": 1948
+      "bytes": 5577,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-31/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1947
+      "bytes": 5579,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-30/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1941
+      "bytes": 5517,
+      "gzipBytes": 1964
     },
     {
       "file": "works/sample-29/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1951
+      "bytes": 5579,
+      "gzipBytes": 1973
     },
     {
       "file": "works/sample-28/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-27/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1950
+      "bytes": 5579,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-26/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1936
+      "bytes": 5517,
+      "gzipBytes": 1959
     },
     {
       "file": "works/sample-25/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-24/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1947
+      "bytes": 5579,
+      "gzipBytes": 1969
     },
     {
       "file": "works/sample-23/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-22/index.html",
-      "bytes": 5234,
-      "gzipBytes": 1930
+      "bytes": 5453,
+      "gzipBytes": 1952
     },
     {
       "file": "works/sample-21/index.html",
-      "bytes": 5336,
-      "gzipBytes": 1946
+      "bytes": 5577,
+      "gzipBytes": 1968
     },
     {
       "file": "works/sample-20/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1950
+      "bytes": 5579,
+      "gzipBytes": 1972
     },
     {
       "file": "works/sample-19/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1941
+      "bytes": 5517,
+      "gzipBytes": 1963
     },
     {
       "file": "works/sample-18/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1949
+      "bytes": 5579,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-17/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-16/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1948
+      "bytes": 5579,
+      "gzipBytes": 1970
     },
     {
       "file": "works/sample-15/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1936
+      "bytes": 5517,
+      "gzipBytes": 1958
     },
     {
       "file": "works/sample-14/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-13/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1947
+      "bytes": 5579,
+      "gzipBytes": 1969
     },
     {
       "file": "works/sample-12/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1938
+      "bytes": 5517,
+      "gzipBytes": 1961
     },
     {
       "file": "works/sample-11/index.html",
-      "bytes": 5234,
-      "gzipBytes": 1928
+      "bytes": 5453,
+      "gzipBytes": 1950
     },
     {
       "file": "works/sample-10/index.html",
-      "bytes": 5336,
-      "gzipBytes": 1949
+      "bytes": 5577,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-09/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1949
+      "bytes": 5579,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-08/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1939
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-07/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1949
+      "bytes": 5579,
+      "gzipBytes": 1972
     },
     {
       "file": "works/sample-06/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-05/index.html",
-      "bytes": 5338,
-      "gzipBytes": 1948
+      "bytes": 5579,
+      "gzipBytes": 1971
     },
     {
       "file": "works/sample-04/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1937
+      "bytes": 5517,
+      "gzipBytes": 1959
     },
     {
       "file": "works/sample-03/index.html",
-      "bytes": 5287,
-      "gzipBytes": 1940
+      "bytes": 5517,
+      "gzipBytes": 1962
     },
     {
       "file": "works/sample-02/index.html",
-      "bytes": 5589,
-      "gzipBytes": 2121
+      "bytes": 5830,
+      "gzipBytes": 2144
     },
     {
       "file": "works/sample-01/index.html",
-      "bytes": 5447,
-      "gzipBytes": 2221
+      "bytes": 5666,
+      "gzipBytes": 2244
     },
     {
       "file": "media/sample-01-0-f4bc90658152bb-1200.webp",
@@ -1373,13 +1373,13 @@
     },
     {
       "file": "contact/index.html",
-      "bytes": 2420,
-      "gzipBytes": 1254
+      "bytes": 2551,
+      "gzipBytes": 1274
     },
     {
       "file": "about/index.html",
-      "bytes": 2910,
-      "gzipBytes": 1356
+      "bytes": 3052,
+      "gzipBytes": 1375
     },
     {
       "file": "_astro/Layout.C9OV13c5.css",

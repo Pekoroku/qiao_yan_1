@@ -50,7 +50,7 @@ export function initMotion(){
   const prepareReveals=()=>{
     const selectors=[
       '.section-heading>div','.section-note','.featured-card .image-wrap','.featured-card .work-meta',
-      '.archive-foot','.about-teaser>div','.contact-teaser>a','.page-heading>div','.archive-grid .work-card',
+      '.archive-foot','.about-teaser h2','.artist-summary','.about-teaser .text-link','.contact-teaser>a','.page-heading>div','.archive-grid .work-card',
       '.story-section>.eyebrow','.story-section .prose>*','.details-section>h2','.detail-images figure','.work-pagination',
       '.about-body>.prose>*','.contact-body>*'
     ].join(',');

@@ -1,0 +1,78 @@
+/* Keep the footer background independent of the capped reading width.
+   The inner container retains the existing desktop and mobile spacing. */
+@media screen {
+  .site-footer {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    min-height: 110px;
+    padding-block: 24px;
+  }
+
+  .footer-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 44px;
+  }
+}
+
+/* Desktop only: natural document flow keeps short pages at least one
+   viewport tall. Long pages still scroll normally, including the footer. */
+@media screen and (min-width: 761px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .preview-strip, .site-header, .site-footer { flex-shrink: 0; }
+  .site-header { width: 100%; }
+  main { width: 100%; flex: 1 0 auto; }
+
+  .about-teaser {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(40px, 6vw, 110px);
+    row-gap: 20px;
+  }
+
+  /* Flatten only the desktop grid; the mobile DOM and block flow are intact. */
+  .about-teaser .artist-copy { display: contents; }
+  .about-teaser > .eyebrow { grid-column: 1; grid-row: 1; }
+  .about-teaser h2 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    align-self: start;
+    overflow-wrap: anywhere;
+  }
+  .about-teaser .artist-summary {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    align-self: start;
+  }
+  .about-teaser .text-link {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    align-self: start;
+  }
+  .contact-teaser {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(40px, 6vw, 110px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer-inner { flex-wrap: wrap; gap: 12px 22px; padding-block: 25px; }
+  .footer-link { margin-left: auto; }
+}

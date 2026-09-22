@@ -1,0 +1,28 @@
+{
+  "comparison": "Settled screenshots with all images decoded; reduced motion; before/after v1.1.1",
+  "results": [
+    {
+      "page": "home",
+      "viewport": "390x844",
+      "identical": false,
+      "differenceBounds": [
+        348,
+        789,
+        364,
+        805
+      ]
+    },
+    {
+      "page": "sample-03",
+      "viewport": "390x844",
+      "identical": true,
+      "differenceBounds": null
+    },
+    {
+      "page": "contact",
+      "viewport": "390x844",
+      "identical": true,
+      "differenceBounds": null
+    }
+  ]
+}
