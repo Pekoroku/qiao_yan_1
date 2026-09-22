@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "version": "1.1",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "13 visible-name characters stagger independently; accessible name preserved",
+    "selected picture reveal and scroll-linked drift occur",
+    "desktop artwork hover lifts full uncropped image",
+    "manual motion off immediately cancels animation and persists",
+    "detail image and metadata enter separately",
+    "story reveals in normal document flow",
+    "10 open/close cycles including immediate Esc and reduced-motion interruption; focus and scroll restored",
+    "OS reduced motion skips all scripted animation",
+    "animated and settled layouts at 320–1920px have no horizontal overflow",
+    "JavaScript disabled: name, nine images and detail remain visible",
+    "IntersectionObserver unavailable: artwork remains visible"
+  ],
+  "errors": [],
+  "scope": "local production build; not real-device or live deployment verification"
+}

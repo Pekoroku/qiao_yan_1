@@ -1,20 +1,5 @@
-export {};
-const motionButton=document.querySelector<HTMLButtonElement>('.motion-toggle');
-const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
-function applyMotion(){
-  if(!motionButton)return;
-  const off=document.documentElement.dataset.motion==='off'||reduce.matches;
-  motionButton.setAttribute('aria-pressed',String(off));
-  motionButton.setAttribute('aria-label',off?'开启非必要动效':'关闭非必要动效');
-  motionButton.querySelector('span')!.textContent=reduce.matches?'系统关闭':off?'关':'开';
-  motionButton.disabled=reduce.matches;
-}
-if(motionButton){motionButton.hidden=false;applyMotion();motionButton.addEventListener('click',()=>{
-  const off=document.documentElement.dataset.motion!=='off';
-  document.documentElement.dataset.motion=off?'off':'on';
-  try{localStorage.setItem('jqy-motion',off?'off':'on')}catch{}
-  applyMotion();
-});reduce.addEventListener('change',applyMotion);}
+import {initMotion,animateElement,motionAllowed} from './motion';
+initMotion();
 
 function imageFailed(img:HTMLImageElement){
   const wrap=img.closest<HTMLElement>('.image-wrap');
@@ -58,26 +43,61 @@ const highButton=document.querySelector<HTMLButtonElement>('#load-high');
 let generation=0;
 let pendingHigh:HTMLImageElement|null=null;
 if(dialog&&openButton&&closeButton&&canvas&&typeof dialog.showModal==='function'){
+  let closing=false;
+  let closeTimer:number|undefined;
+  const viewerAnimations=new Set<Animation>();
+  const runViewer=(element:Element|null,frames:Keyframe[],duration:number)=>{
+    const animation=animateElement(element,frames,{duration,fill:'both'});
+    if(animation){viewerAnimations.add(animation);animation.finished.then(()=>{viewerAnimations.delete(animation);animation.cancel()},()=>viewerAnimations.delete(animation));}
+    return animation;
+  };
+  const stopViewerAnimations=()=>{for(const animation of viewerAnimations)animation.cancel();viewerAnimations.clear()};
   openButton.hidden=false;
   openButton.addEventListener('click',()=>{
     if(dialog.open)return;
     const original=document.querySelector('#main-art-image .image-wrap');
     if(!original)return;
+    const origin=original.querySelector('img')?.getBoundingClientRect();
+    stopViewerAnimations();closing=false;delete dialog.dataset.closing;
     generation++;
     canvas.replaceChildren(original.cloneNode(true));
     canvas.classList.remove('zoomed');
-    document.body.classList.add('viewer-open');dialog.showModal();closeButton.focus();
+    document.body.classList.add('viewer-open');dialog.showModal();closeButton.focus({preventScroll:true});
     if(status)status.textContent='';
     if(highButton)highButton.disabled=false;
+    const image=canvas.querySelector('img');const dest=image?.getBoundingClientRect();
+    if(image&&origin&&dest&&origin.width&&dest.width){
+      image.style.transformOrigin='0 0';
+      runViewer(image,[{transform:`translate(${origin.left-dest.left}px,${origin.top-dest.top}px) scale(${origin.width/dest.width},${origin.height/dest.height})`},{transform:'none'}],560);
+    }
+    runViewer(dialog,[{backgroundColor:'rgba(239,238,232,0)'},{backgroundColor:'rgb(239,238,232)'}],400);
+    runViewer(dialog.querySelector('.viewer-toolbar'),[{opacity:0,transform:'translateY(-12px)'},{opacity:1,transform:'none'}],380);
   });
   const cleanupViewer=()=>{
+    clearTimeout(closeTimer);closeTimer=undefined;stopViewerAnimations();closing=false;delete dialog.dataset.closing;
     generation++;
     if(pendingHigh){pendingHigh.onload=null;pendingHigh.onerror=null;pendingHigh=null;}
     document.body.classList.remove('viewer-open');canvas.replaceChildren();openButton.focus({preventScroll:true});
   };
-  closeButton.addEventListener('click',()=>{dialog.close();cleanupViewer();});
-  dialog.addEventListener('cancel',()=>cleanupViewer());
-  dialog.addEventListener('close',cleanupViewer);
+  const closeViewer=()=>{
+    if(closing||!dialog.open)return;
+    closing=true;dialog.dataset.closing='true';generation++;stopViewerAnimations();
+    const finish=()=>{if(!closing)return;dialog.close();cleanupViewer()};
+    if(!motionAllowed()){finish();return}
+    const image=canvas.querySelector('img');const from=image?.getBoundingClientRect();
+    const to=document.querySelector('#main-art-image img')?.getBoundingClientRect();
+    if(image&&from&&to&&from.width&&to.width&&!canvas.classList.contains('zoomed')){
+      image.style.transformOrigin='0 0';
+      runViewer(image,[{transform:'none',opacity:1},{transform:`translate(${to.left-from.left}px,${to.top-from.top}px) scale(${to.width/from.width},${to.height/from.height})`,opacity:.15}],260);
+    }
+    const animation=runViewer(dialog,[{opacity:1},{opacity:0}],260);
+    animation?.finished.then(finish,finish);
+    // Closing always completes, including a background tab or interrupted animation.
+    closeTimer=window.setTimeout(finish,340);
+  };
+  closeButton.addEventListener('click',closeViewer);
+  dialog.addEventListener('cancel',event=>{event.preventDefault();closeViewer()});
+  dialog.addEventListener('close',()=>{if(!dialog.open)cleanupViewer()});
   dialog.addEventListener('keydown',event=>{
     if(event.key!=='Tab')return;
     const buttons=[...dialog.querySelectorAll<HTMLButtonElement>('button:not(:disabled)')].filter(b=>!b.hidden);
@@ -86,14 +106,14 @@ if(dialog&&openButton&&closeButton&&canvas&&typeof dialog.showModal==='function'
     else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
   });
   highButton?.addEventListener('click',()=>{
-    if(!dialog.open||!highButton.dataset.src)return;
+    if(closing||!dialog.open||!highButton.dataset.src)return;
     highButton.disabled=true;
     if(status)status.textContent='正在加载高清细节…';
     const token=generation;
     const img=new Image();pendingHigh=img;
     img.alt=document.querySelector<HTMLImageElement>('#main-art-image img')?.alt||'作品高清细节';
     img.width=Number(highButton.dataset.width);img.height=Number(highButton.dataset.height);
-    img.onload=()=>{if(token!==generation||!dialog.open)return;canvas.replaceChildren(img);canvas.classList.add('zoomed');pendingHigh=null;if(status)status.textContent='高清细节已加载，可滚动查看。';};
+    img.onload=()=>{if(token!==generation||!dialog.open)return;canvas.replaceChildren(img);canvas.classList.add('zoomed');pendingHigh=null;runViewer(img,[{opacity:.3},{opacity:1}],280);if(status)status.textContent='高清细节已加载，可滚动查看。';};
     img.onerror=()=>{if(token!==generation||!dialog.open)return;highButton.disabled=false;pendingHigh=null;if(status)status.textContent='高清图加载失败，请重试。';};
     img.src=highButton.dataset.src;
   });

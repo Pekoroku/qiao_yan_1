@@ -1,0 +1,43 @@
+/* Content is visible without JavaScript. WAAPI supplies temporary entry frames. */
+.hero-title{animation:none}
+.name-letter{display:inline-block;font-style:normal;font-weight:400;white-space:pre;transform-origin:50% 90%}
+.hero-title .name-line{translate:var(--name-shift,0px) 0}
+.hero-art>a{display:block;translate:0 var(--hero-drift,0px)}
+.featured-card .art-link{translate:0 var(--drift-y,0px)}
+.art-link .image-wrap picture,.hero-art picture{transition:transform .65s var(--ease),box-shadow .65s var(--ease)}
+.card-arrow{transition:transform .35s var(--ease)}
+.work-meta h3{transition:color .3s}
+.work-meta{position:relative}
+.featured-card .work-meta:after{content:'';position:absolute;left:0;right:0;bottom:-14px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.art-link:focus-visible .card-arrow{transform:translate(3px,-3px)}
+.back-link svg,.work-pagination svg{transition:transform .3s var(--ease)}
+.back-link:hover svg,.work-pagination>div:first-child a:hover svg{transform:translateX(-4px)}
+.work-pagination>div:last-child a:hover svg{transform:translateX(4px)}
+.art-viewer[data-closing]{pointer-events:none}
+.art-viewer[open]::backdrop{animation:backdrop-in .4s ease both}
+.art-viewer[data-closing]::backdrop{animation:backdrop-out .26s ease both}
+@keyframes backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes backdrop-out{to{opacity:0}}
+.viewer-canvas{isolation:isolate}
+.viewer-toolbar,#viewer-status{position:relative;z-index:1}
+::view-transition-old(root){animation:page-away .18s ease-out both}
+::view-transition-new(root){animation:page-arrive .32s var(--ease) both}
+@keyframes page-away{to{opacity:0}}
+@keyframes page-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html:not([data-motion=off]) .art-link:hover .image-wrap picture,
+  html:not([data-motion=off]) .hero-art>a:hover picture{transform:translateY(-7px) scale(.99);box-shadow:0 20px 30px -20px #29332b45}
+  html:not([data-motion=off]) .art-link:hover .card-arrow{transform:translate(4px,-4px)}
+  html:not([data-motion=off]) .art-link:hover .work-meta:after{transform:scaleX(1)}
+  html:not([data-motion=off]) .art-link:hover h3{color:var(--accent)}
+  html:not([data-motion=off]) .hero-title:hover .name-letter{animation:letter-lift .65s var(--ease) calc(var(--letter-order)*30ms) both}
+}
+@keyframes letter-lift{0%,100%{transform:none}45%{transform:translateY(-.065em)}}
+@media(max-width:640px){.hero-title{font-size:clamp(60px,16vw,100px)}.hero-title .name-line+.name-line{padding-left:.3em}}
+@media(prefers-reduced-motion:reduce){
+  .name-line,.hero-art>a,.featured-card .art-link{translate:none!important}
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important}
+}
+html[data-motion=off] .name-line,html[data-motion=off] .hero-art>a,html[data-motion=off] .featured-card .art-link{translate:none!important}
+html[data-motion=off] ::view-transition-old(root),html[data-motion=off] ::view-transition-new(root){animation:none!important}
+@media print{.name-line,.hero-art>a,.featured-card .art-link{translate:none!important}}

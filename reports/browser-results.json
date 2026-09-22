@@ -28,18 +28,18 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 65186,
+          "totalBodyBytes": 74631,
           "images": 9,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/",
               "status": 200,
-              "bytes": 19065
+              "bytes": 16096
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-640.webp",
@@ -57,9 +57,19 @@
               "bytes": 3414
             },
             {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-640.webp",
+              "status": 200,
+              "bytes": 1904
+            },
+            {
               "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-640.webp",
               "status": 200,
               "bytes": 3634
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
+              "status": 200,
+              "bytes": 9366
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-640.webp",
@@ -67,24 +77,19 @@
               "bytes": 3610
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-640.webp",
-              "status": 200,
-              "bytes": 1904
-            },
-            {
               "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-640.webp",
               "status": 200,
               "bytes": 2372
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-08-0-b6ded7a354a29c-640.webp",
-              "status": 200,
-              "bytes": 3156
-            },
-            {
               "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-640.webp",
               "status": 200,
               "bytes": 2748
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-08-0-b6ded7a354a29c-640.webp",
+              "status": 200,
+              "bytes": 3156
             }
           ]
         },
@@ -97,23 +102,18 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 142822,
+          "totalBodyBytes": 151486,
           "images": 21,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/works/",
               "status": 200,
-              "bytes": 64809
+              "bytes": 61059
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
-            },
-            {
-              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-640.webp",
-              "status": 200,
-              "bytes": 2438
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-640.webp",
@@ -124,6 +124,16 @@
               "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-640.webp",
               "status": 200,
               "bytes": 3414
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-640.webp",
+              "status": 200,
+              "bytes": 2438
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
+              "status": 200,
+              "bytes": 9366
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-640.webp",
@@ -151,14 +161,19 @@
               "bytes": 3156
             },
             {
+              "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-640.webp",
+              "status": 200,
+              "bytes": 2748
+            },
+            {
               "url": "http://127.0.0.1:4321/media/sample-10-0-63b72a018ebb0e-640.webp",
               "status": 200,
               "bytes": 1406
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-09-0-e824086bcacfc1-640.webp",
+              "url": "http://127.0.0.1:4321/media/sample-11-0-92b4ec402d931e-640.webp",
               "status": 200,
-              "bytes": 2748
+              "bytes": 4162
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-12-0-75d8b6f07bb1ac-640.webp",
@@ -169,11 +184,6 @@
               "url": "http://127.0.0.1:4321/media/sample-13-0-5eebae5e22034c-640.webp",
               "status": 200,
               "bytes": 2052
-            },
-            {
-              "url": "http://127.0.0.1:4321/media/sample-11-0-92b4ec402d931e-640.webp",
-              "status": 200,
-              "bytes": 4162
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-14-0-8ab02f9864a753-640.webp",
@@ -191,6 +201,11 @@
               "bytes": 1882
             },
             {
+              "url": "http://127.0.0.1:4321/media/sample-17-0-8c8181022fb9be-640.webp",
+              "status": 200,
+              "bytes": 3008
+            },
+            {
               "url": "http://127.0.0.1:4321/media/sample-18-0-9f218de560871d-640.webp",
               "status": 200,
               "bytes": 1948
@@ -201,19 +216,14 @@
               "bytes": 3614
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-17-0-8c8181022fb9be-640.webp",
+              "url": "http://127.0.0.1:4321/media/sample-21-0-a58155fa100c55-640.webp",
               "status": 200,
-              "bytes": 3008
+              "bytes": 984
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-20-0-249d79ad1510dd-640.webp",
               "status": 200,
               "bytes": 2844
-            },
-            {
-              "url": "http://127.0.0.1:4321/media/sample-21-0-a58155fa100c55-640.webp",
-              "status": 200,
-              "bytes": 984
             }
           ]
         },
@@ -226,23 +236,28 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 33798,
+          "totalBodyBytes": 42462,
           "images": 1,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/works/sample-01/",
               "status": 200,
-              "bytes": 9145
+              "bytes": 5395
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
               "status": 200,
               "bytes": 4468
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
+              "status": 200,
+              "bytes": 9366
             }
           ]
         },
@@ -255,18 +270,18 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 104418,
+          "totalBodyBytes": 113863,
           "images": 9,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/",
               "status": 200,
-              "bytes": 19065
+              "bytes": 16096
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
@@ -274,19 +289,24 @@
               "bytes": 4468
             },
             {
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
+              "status": 200,
+              "bytes": 9366
+            },
+            {
               "url": "http://127.0.0.1:4321/media/sample-02-0-4344a186d69356-1440.webp",
               "status": 200,
               "bytes": 7904
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-1050.webp",
-              "status": 200,
-              "bytes": 6968
-            },
-            {
               "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-1300.webp",
               "status": 200,
               "bytes": 9038
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-03-0-2b0204bcc064a9-1050.webp",
+              "status": 200,
+              "bytes": 6968
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-1440.webp",
@@ -324,18 +344,18 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 118928,
+          "totalBodyBytes": 127592,
           "images": 7,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/works/",
               "status": 200,
-              "bytes": 64809
+              "bytes": 61059
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-960.webp",
@@ -353,14 +373,9 @@
               "bytes": 5730
             },
             {
-              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-960.webp",
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
               "status": 200,
-              "bytes": 3470
-            },
-            {
-              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-960.webp",
-              "status": 200,
-              "bytes": 6360
+              "bytes": 9366
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-04-0-74479c943445e5-960.webp",
@@ -371,6 +386,16 @@
               "url": "http://127.0.0.1:4321/media/sample-07-0-552f9953c7b227-960.webp",
               "status": 200,
               "bytes": 3786
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-06-0-6cf941c1937992-960.webp",
+              "status": 200,
+              "bytes": 6360
+            },
+            {
+              "url": "http://127.0.0.1:4321/media/sample-05-0-cd871f2e3548b8-960.webp",
+              "status": 200,
+              "bytes": 3470
             }
           ]
         },
@@ -383,23 +408,28 @@
           "observationSeconds": 5,
           "network": "unthrottled local HTTP",
           "pending": 0,
-          "totalBodyBytes": 35780,
+          "totalBodyBytes": 44444,
           "images": 1,
           "payloads": [
             {
               "url": "http://127.0.0.1:4321/works/sample-01/",
               "status": 200,
-              "bytes": 9145
+              "bytes": 5395
             },
             {
-              "url": "http://127.0.0.1:4321/_astro/Layout.DOqPTdRI.css",
+              "url": "http://127.0.0.1:4321/_astro/Layout.VOhccZ17.css",
               "status": 200,
-              "bytes": 20185
+              "bytes": 23233
             },
             {
               "url": "http://127.0.0.1:4321/media/sample-01-0-f4bc90658152bb-1200.webp",
               "status": 200,
               "bytes": 6450
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/Layout.astro_astro_type_script_index_0_lang.Clz4NU4N.js",
+              "status": 200,
+              "bytes": 9366
             }
           ]
         }
